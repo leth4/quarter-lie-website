@@ -28,7 +28,7 @@ body {
     max-width: 80ch;
     grid-template-rows: auto 1fr auto;
     display: grid;
-    font-size: 18px;
+    font-size: 1.5rem;
     color: var(--text);
 }
 
@@ -43,7 +43,6 @@ main h1 {
     color: var(--accent);
     font-weight: 300;
 }
-
 
 main mark, main mark a {
     background-color: transparent;
