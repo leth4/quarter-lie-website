@@ -9,10 +9,10 @@
 }
 
 :root {
-    --background: #0e0f12;;
+    --background: #000000;;
     --card: #0e0e0e;
     --text: #b1acac;
-    --accent: #d5df4b;
+    --accent: #eeeeee;
     --selection: #424141;
     --hover-shadow: 0 0 50px #e3d1bb20;
 }
@@ -44,10 +44,6 @@ main h1 {
     font-weight: 300;
 }
 
-nav a:hover {
-    color: var(--background);
-    background-color: var(--text);
-}
 
 main mark, main mark a {
     background-color: transparent;
@@ -56,6 +52,11 @@ main mark, main mark a {
 
 main a {
     color: var(--text);
+}
+
+nav a:hover {
+    color: var(--background);
+    background-color: var(--text);
 }
 
 main a:hover {
@@ -80,27 +81,7 @@ main iframe {
     top: 0;
 }
 
-main .date-list {
-    padding: 0;
-    list-style-type: none;
-}
-
-main time {
-    color: var(--middle);
-}
-
-main .date-list li time {
-    padding-right: 20px
-}
-
-main pre {
-    background-color: var(--card);
-    overflow: auto;
-    padding: 10px;
-    margin-bottom: 30px;
-}
-
-main kbd, main span {
+main span {
     font-size: 85%;
     display: inline-block;
     padding: 2px 4px;
@@ -108,17 +89,6 @@ main kbd, main span {
     border: 1px solid var(--middle);
     font-family: inherit;
     background-color: var(--card);
-}
-
-main table tr {
-    text-align: left;
-    vertical-align:  center;
-}
-
-main table, main td, main th {
-    border: 1px solid var(--middle);
-    border-collapse: collapse;
-    padding: 3px 4px;
 }
 
 main .gallery {
@@ -134,16 +104,4 @@ main .gallery img {
 
 main .gallery img:hover {
     box-shadow: var(--hover-shadow);
-}
-
-main .reel {
-    column-gap: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: auto;
-}
-
-@media (max-width: 600px) {
-    main .reel {grid-template-columns: 1fr;}
-    main .reel img {padding-top: 1rem}
 }
