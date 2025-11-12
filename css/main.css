@@ -10,7 +10,8 @@
 
 :root {
     --background: #000000;;
-    --card: #0e0e0e;
+    --card: #161616;
+    --card-selected: #202020;
     --text: #b1acac;
     --accent: #eeeeee;
     --selection: #424141;
@@ -49,18 +50,27 @@ main mark, main mark a {
     color: var(--accent)
 }
 
-main a {
+main .buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+main a.button {
     color: var(--text);
+    background-color: var(--card);
+    /* outline-color: red;
+    outline-width: 1px;
+    outline-style: outset; */
+    text-decoration: none;
+    width: 100%;
+    margin: 5px;
+    padding: 20px 10px;
 }
 
-nav a:hover {
-    color: var(--background);
-    background-color: var(--text);
-}
-
-main a:hover {
+main a.button:hover {
     color: var(--accent);
-    position: relative;
+    background-color: var(--card-selected);
+    transition: all .5s;
 }
 
 main img {
