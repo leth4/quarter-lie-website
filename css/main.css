@@ -1,0 +1,149 @@
+@font-face {
+    font-family: Cormorand Garamond;
+    src: url(../fonts/cormorant-garamond-variable.woff);
+}
+
+@font-face {
+    font-family: Ropa Sans;
+    src: url(../fonts/ropa-sans.woff);
+}
+
+:root {
+    --background: #0e0f12;;
+    --card: #0e0e0e;
+    --text: #b1acac;
+    --accent: #d5df4b;
+    --selection: #424141;
+    --hover-shadow: 0 0 50px #e3d1bb20;
+}
+::selection {
+    background-color: var(--selection);
+}
+
+body {
+    font-family: 'Ropa Sans', sans-serif;
+    background-color: var(--background);
+    margin: auto;
+    padding: 1rem;
+    max-width: 80ch;
+    grid-template-rows: auto 1fr auto;
+    display: grid;
+    font-size: 18px;
+    color: var(--text);
+}
+
+main {
+    padding-bottom: 20px;
+}
+
+main h1 {
+    font-family: 'Cormorand Garamond', sans-serif;
+    text-align: center;
+    font-size: 7rem;
+    color: var(--accent);
+    font-weight: 300;
+}
+
+nav a:hover {
+    color: var(--background);
+    background-color: var(--text);
+}
+
+main mark, main mark a {
+    background-color: transparent;
+    color: var(--accent)
+}
+
+main a {
+    color: var(--text);
+}
+
+main a:hover {
+    color: var(--accent);
+    position: relative;
+}
+
+main img {
+    max-width: 100%;
+}
+
+main .youtube-embed {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+main iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+main .date-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+main time {
+    color: var(--middle);
+}
+
+main .date-list li time {
+    padding-right: 20px
+}
+
+main pre {
+    background-color: var(--card);
+    overflow: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+main kbd, main span {
+    font-size: 85%;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 3px;
+    border: 1px solid var(--middle);
+    font-family: inherit;
+    background-color: var(--card);
+}
+
+main table tr {
+    text-align: left;
+    vertical-align:  center;
+}
+
+main table, main td, main th {
+    border: 1px solid var(--middle);
+    border-collapse: collapse;
+    padding: 3px 4px;
+}
+
+main .gallery {
+    columns: 15rem 2;
+    gap: .5rem;
+}
+
+main .gallery img {
+    width: 100%;
+    margin-bottom: .3rem;
+    transition: all 0.25s ease-in-out;
+}
+
+main .gallery img:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+main .reel {
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    main .reel {grid-template-columns: 1fr;}
+    main .reel img {padding-top: 1rem}
+}
